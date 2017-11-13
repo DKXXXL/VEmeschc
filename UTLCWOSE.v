@@ -1156,11 +1156,10 @@ Lemma not_rclosed_means_has_free:
     intros x;
     assert (forall (x: tm) (B: Prop), (rel_closed empty x -> B) -> (~B -> ~rel_closed empty x)).
     intros.
-    eapply contrapositive. apply rel_closed_dec. apply H. auto.
-    induction x; intros;
-    not_r_closed_use_induction. 
-    Focus 13.
+    eapply contrapositive.
 Abort.
+
+End UTLCWOSE.
 
 (*
     Now I need several tools:
